@@ -1,23 +1,35 @@
 /**********************************************************************************
 **                                                                               **
-**                               Estructura if                                   **
+**                               Switch case                                     **
 **                                                                               **
-**   NOM: Carles Bosch                                    DATA: 06 / 02 / 2017   **
+**   NOM: Carles Bosch                                    DATA: 13 / 02 / 2017   **
 **********************************************************************************/
 //********** INCLUDE **************************************************************
 
 //********** VARIABLES ************************************************************
-int tempAigua = 101;
+int sensorReading = 4;
 
 //********** SETUP ****************************************************************
-void setup() {                // S'executa un sol cop
-  Serial.begin(9600);         // Configura una biblioteca a 9600 bpm 
-
-  if ( tempAigua > 100)       // Si l'aigua és superior al número 100 ...
-  {
-    Serial.print("Aigua supera els 100C, esta bullint!"); 
-                              // Escriu ( Aigua supera els 100C, esta bullint! )
-  } 
+void setup() {                            // S'executa un sol cop
+  Serial.begin(9600);                     // Configura una biblioteca a 9600 bpm 
+  Serial.print("The day is "); 
+   
+  switch (sensorReading) {
+  case 0:    
+    Serial.println("dark");
+    break;
+  case 1:    
+    Serial.println("dim");
+    break;
+  case 2:    
+    Serial.println("medium");
+    break;
+  case 3:
+    Serial.println("bright");
+    break;
+  default:
+    Serial.println("... I don't know!!!");
+  }
 }
 
 //********** LOOP *****************************************************************
