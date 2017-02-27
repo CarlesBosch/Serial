@@ -20,22 +20,22 @@ void setup() {                // S'executa un sol cop
 void loop() {                // S'executa repetidament
 Serial.write(thisByte);       
   
-  Serial.print(", dec: "); 
-  Serial.print(thisByte);      
-  Serial.print(", hex: "); 
-  Serial.print(thisByte, HEX);     
-  Serial.print(", oct: "); 
-  Serial.print(thisByte, OCT);     
-  Serial.print(", bin: "); 
-  Serial.println(thisByte, BIN);   
+  Serial.print(", dec: ");       //  Escriu ( , dec:  )
+  Serial.print(thisByte);        // Escriu el valor de " thisByte " en decimal
+  Serial.print(", hex: ");       // Escriu ( , hex:  ) 
+  Serial.print(thisByte, HEX);   // Escriu el valor de " thisByte " en hexadecimal
+  Serial.print(", oct: ");       // Escriu ( , oct:  )
+  Serial.print(thisByte, OCT);   // Escriu el valor de " thisByte " en octal
+  Serial.print(", bin: ");       // Escriu ( , bin:  )
+  Serial.println(thisByte, BIN); // Escriu el valor de " thisByte " en binari
 
-  if(thisByte == 126)  // if printed last visible character '~'
+  if(thisByte == 126)       // Si el valor de " thisbyte " és igual a 126 ...
   { 
-    while(true)
+    while(true)             // Mentre sigui cert .... (en aquest cas no fa res)
     { 
     } 
   } 
-  thisByte++;     // go on to the next character
+  thisByte++;                    // Suma 1 a " thisbyte "
 }
 
 //********** FUNCIONS *************************************************************

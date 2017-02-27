@@ -14,18 +14,23 @@ void setup() {                // S'executa un sol cop
   Serial.begin(9600);         // Configura una biblioteca a 9600 bpm
 
   Serial.println("Diferents formats per el mateix numero:");
+  // Escriu a una nova línia (Diferents formats per el mateix numero:)
 
-  Serial.write(num);
-  Serial.println();
+  Serial.write(num);          // 
+  Serial.println();           // 
 
-  Serial.println(num);
-  Serial.println(num, DEC);
+  Serial.println(num);        // Escriu a una nova línia el nalor del "num"
+  Serial.println(num, DEC); 
+  // Escriu a una nova línia el valor del "num" en decimal
+ 
+  Serial.println(num, BIN);   
+  // Escriu a una nova línia el valor del "num" en binari
 
-  Serial.println(num, BIN);
+  Serial.println(num, HEX);   
+  // Escriu a una nova línia el valor del "num" en hexadecimal
 
-  Serial.println(num, HEX);
-
-  Serial.println(num, OCT);
+  Serial.println(num, OCT);   
+  // Escriu a una nova línia el valor del "num" en octal
 }
 
 //********** LOOP *****************************************************************
